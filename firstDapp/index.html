@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+  <title>
+    First Dapp Demo
+  </title>
+</head>
+
+<div class="container"></div>
+<body>
+ 
+  <h1>First Dapp Demo</h1>
+  <h2 id="info"></h2>
+  <label>姓名：</label>
+  <input id="name" type="text">
+  <label>年龄：</label>
+  <input id="age" type="text">
+  <button id="button">更新内容</button>
+  <script>
+    // 实例化web3
+if (typeof web3 !== 'undefined') { 
+	web3 = new Web3(web3.currentProvider);
+	} else {
+	// set the provider you want from Web3.providers
+	web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8546"));
+}
+console.log("web3:"+web3); //然后再输出web3
+
+  </script>
+</body>
+</div>
+
+
+</html>
